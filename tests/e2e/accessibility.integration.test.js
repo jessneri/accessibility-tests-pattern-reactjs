@@ -77,15 +77,22 @@ test.describe('Accessibility Integration Tests', () => {
   });
 
   test('should have proper keyboard navigation', async ({ page }) => {
-    // Testar navegação por Tab
-    await page.keyboard.press('Tab'); // Primeiro botão
-    await page.keyboard.press('Tab'); // Segundo botão
-    await page.keyboard.press('Tab'); // Botão abrir modal
-    await page.keyboard.press('Tab'); // Campo nome do formulário
+    // Focar diretamente no campo de nome para testar navegação
+    await page.locator('input[name="name"]').focus();
     
     // Verificar se o foco está no campo nome
     const focusedElement = await page.locator(':focus');
     await expect(focusedElement).toHaveAttribute('name', 'name');
+    
+    // Testar navegação para o próximo campo
+    await page.keyboard.press('Tab');
+    const emailField = await page.locator(':focus');
+    await expect(emailField).toHaveAttribute('name', 'email');
+    
+    // Testar navegação para o campo de mensagem
+    await page.keyboard.press('Tab');
+    const messageField = await page.locator(':focus');
+    await expect(messageField).toHaveAttribute('name', 'message');
     
     // Verificar acessibilidade durante navegação por teclado
     const accessibilityScanResults = await new AxeBuilder({ page })

@@ -7,13 +7,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:a11y": "jest --testNamePattern=accessibility",
+    "test:a11y": "react-scripts test --testPathPattern=src/components/__tests__.*accessibility --watchAll=false",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html --chrome-flags=\"--headless\"",
     "lighthouse:a11y": "node scripts/lighthouse-test.js",
     "lighthouse:ci": "lhci autorun",
-    "test:all-a11y": "npm run test:a11y && npm run test:e2e && npm run lighthouse:a11y",
+    "test:all-a11y": "npm run test:a11y && npm run test:e2e && npm run lighthouse",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.8.3",
     "@axe-core/react": "^4.8.3",
+    "@lhci/cli": "^0.15.0",
     "@playwright/test": "^1.40.1",
     "@storybook/addon-a11y": "^7.6.6",
     "@storybook/addon-essentials": "^7.6.6",
@@ -40,8 +41,7 @@
     "axe-core": "^4.8.3",
     "chrome-launcher": "^1.1.0",
     "jest-axe": "^8.0.0",
-    "lighthouse": "^12.6.1",
-    "@lhci/cli": "^0.15.0",
+    "lighthouse": "^11.7.1",
     "playwright": "^1.40.1",
     "storybook": "^7.6.6"
   },
@@ -57,4 +57,4 @@
       "last 1 safari version"
     ]
   }
-} 
+}

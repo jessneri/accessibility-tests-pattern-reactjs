@@ -93,7 +93,7 @@ const Form = () => {
           required
         />
         {errors.name && (
-          <div id="name-error" role="alert" style={{ color: 'red', fontSize: '14px' }}>
+          <div id="name-error" role="alert" className="error-message">
             {errors.name}
           </div>
         )}
@@ -114,7 +114,7 @@ const Form = () => {
           required
         />
         {errors.email && (
-          <div id="email-error" role="alert" style={{ color: 'red', fontSize: '14px' }}>
+          <div id="email-error" role="alert" className="error-message">
             {errors.email}
           </div>
         )}
@@ -136,7 +136,7 @@ const Form = () => {
           style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
         {errors.message && (
-          <div id="message-error" role="alert" style={{ color: 'red', fontSize: '14px' }}>
+          <div id="message-error" role="alert" className="error-message">
             {errors.message}
           </div>
         )}
