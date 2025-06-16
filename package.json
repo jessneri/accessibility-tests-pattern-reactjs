@@ -14,6 +14,7 @@
     "lighthouse:a11y": "node scripts/lighthouse-test.js",
     "lighthouse:ci": "lhci autorun",
     "test:all-a11y": "npm run test:a11y && npm run test:e2e && npm run lighthouse",
+    "generate-reports": "node scripts/generate-reports.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

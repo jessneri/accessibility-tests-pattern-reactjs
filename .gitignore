@@ -62,4 +62,8 @@ ehthumbs.db
 
 # Playwright
 /test-results/
-/playwright/.cache/ 
+/playwright/.cache/
+
+# Reports (exceto exemplos)
+/reports/
+!/reports/.gitkeep
