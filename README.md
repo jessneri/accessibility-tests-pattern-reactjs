@@ -13,7 +13,7 @@ Implementar, testar e validar estratégias de acessibilidade em aplicações des
 
 ## Contexto Acadêmico
 
-Este projeto está vinculado ao Trabalho de Conclusão de Curso (TCC) que tem como objetivo propor uma abordagem eficaz de testes de acessibilidade, permitindo identificar e corrigir barreiras desde as fases iniciais do desenvolvimento.
+Este projeto está vinculado ao Trabalho de Conclusão de Curso (TCC) de especialização em Engenharia de Software pela USP/Esalq em que tem como objetivo propor uma abordagem eficaz de testes de acessibilidade, permitindo identificar e corrigir barreiras desde as fases iniciais do desenvolvimento.
 
 A pesquisa parte da premissa de que a combinação de testes automatizados e manuais, somada a boas práticas de desenvolvimento, pode aumentar significativamente o nível de acessibilidade de interfaces digitais.
 
